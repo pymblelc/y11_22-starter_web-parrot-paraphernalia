@@ -34,6 +34,7 @@
     border-radius: 15px;
   }
   
+  /* translate icon */
   .material-symbols-outlined {
     align-content: flex-end;
     width: 100%;
@@ -45,10 +46,27 @@
   }
   
   .bigTitle { 
-      background-color: lightpink; 
+      background-color: rgb(253, 176, 179);
+      
       }
-  
-  
+  .bigTitleUpper {
+      background-color: rgb(253, 176, 179);
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Rampart One', cursive;
+      font-size: 30px;
+  }
+  .profilePicture {
+    width: 200px;
+    
+  }
+  .mainSect {
+    display: flex;
+  }
+  .sidebar {
+    border-style:solid;
+    border-color:cornsilk;
+  }
   .general {
       background-color:cornsilk;
   }
