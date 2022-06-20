@@ -2,7 +2,65 @@
     background-color: linen;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  
+  /* translate icon */
+.material-symbols-outlined {
+  align-content: flex-end;
+  width: 100%;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48,
+}
+
+.topBar {
+  background-color:rgba(174, 143, 242, 0.8);
+}
+/* fancy header business */
+  * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  section{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);;
+    background-size: 400% 400%;
+    position: relative;
+    display:flex;
+    animation: animate 7.5s ease-in-out infinite;
+
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  h1{
+    color: #fff;
+    background: rgba(255,255,255,.2);
+    padding: 20px;
+    font-size: 50px;
+    font-family: 'Rampart One', cursive;
+    border-radius: 20px;
+    align-content:flex-start;
+  }
+
+  @keyframes animate{
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
+  }
   div {
     padding: 5px 10px;
     background-color: mistyrose;
@@ -10,89 +68,82 @@
     border-color: black; */
   }
   
-  button {
-    background-color:linen;
-    border-color:mistyrose; 
-    border-radius:0px;
-    padding: 5px, 5px;
-  }
-  button:hover {
-    background-color: rgb(200, 159, 168);
-    transition-duration: 0.1s;
-  }
-  
-  .illuminae {
-    width: 30%;
-    border: rgb(199, 68, 58) 4px double;
-    border-width: 10px;
-    border-radius: 15px;
-  }
-  .gemini {
-    width: 30%;
-    border: rgb(26, 106, 163) 4px double;
-    border-width: 10px;
-    border-radius: 15px;
-  }
-  
-  /* translate icon */
-  .material-symbols-outlined {
-    align-content: flex-end;
-    width: 100%;
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48,
-  }
-  
-  .bigTitle { 
-      background-color: rgb(253, 176, 179);
-      
-      }
-  .bigTitleUpper {
-      background-color: rgb(253, 176, 179);
-      display: flex;
-      justify-content: space-between;
-      font-family: 'Rampart One', cursive;
-      font-size: 30px;
-  }
-  .profilePicture {
-    width: 30%;
-    height: 30%;
+
+button {
+  background-color:linen;
+  border-color:mistyrose; 
+  border-radius:0px;
+  padding: 5px, 5px;
+}
+button:hover {
+  background-color: rgb(200, 159, 168);
+  transition-duration: 0.1s;
+}
+
+.bigTitle { 
+    background-color: rgb(253, 176, 179);
     
-  }
-  .mainSect {
+    }
+.bigTitleUpper {
+    background-color: rgb(253, 176, 179);
     display: flex;
-  }
-  .sidebar {
-    border-style:solid;
-    border-color:cornsilk;
-    width: 100%;
-  }
-  .general {
-      background-color:cornsilk;
-
-  }
-  .school {
-      background-color:cornsilk;
-  }
-  .subjects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content:space-around;
-  }
-  .subjectDesc {
+    justify-content: space-between;
+    font-family: 'Rampart One', cursive;
+    font-size: 30px;
+}
+.profilePicture {
+  width: 200px;
+  height: 200px;
+  border-width: 10px;
+  border-style:solid;
+  border-radius:300px;
+  border-color:rgba(255, 255, 255, 0.2)
+}
+.mainSect {
+  display: flex;
+}
+.sidebar {
+  border-style:solid;
+  border-color:cornsilk;
+  width: 100%;
+}
+.general {
     background-color:cornsilk;
-    border-style:solid;
-    border-width:0px 10px 20px 10px;
-    border-color:mistyrose;
-  
-  }
 
-  .videos {
-    width: 40%;
-  }
-  .books {
-    width: 60%;
-  }
-  
+}
+.school {
+    background-color:cornsilk;
+}
+.subjects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.subjectDesc {
+  background-color:cornsilk;
+  border-style:solid;
+  border-width:0px 10px 20px 10px;
+  border-color:mistyrose;
+
+}
+
+
+.books {
+  width: 60%;
+}
+.illuminae {
+  width: 30%;
+  border: rgb(199, 68, 58) 4px double;
+  border-width: 10px;
+  border-radius: 15px;
+}
+.gemini {
+  width: 30%;
+  border: rgb(26, 106, 163) 4px double;
+  border-width: 10px;
+  border-radius: 15px;
+}
+.videos {
+  width: 40%;
+}
+
