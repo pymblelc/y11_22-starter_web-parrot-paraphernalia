@@ -22,13 +22,13 @@
   }
   
   .illuminae {
-    width: 50%;
+    width: 30%;
     border: rgb(199, 68, 58) 4px double;
     border-width: 10px;
     border-radius: 15px;
   }
   .gemini {
-    width: 50%;
+    width: 30%;
     border: rgb(26, 106, 163) 4px double;
     border-width: 10px;
     border-radius: 15px;
@@ -57,7 +57,8 @@
       font-size: 30px;
   }
   .profilePicture {
-    width: 200px;
+    width: 30%;
+    height: 30%;
     
   }
   .mainSect {
@@ -66,6 +67,7 @@
   .sidebar {
     border-style:solid;
     border-color:cornsilk;
+    width: 100%;
   }
   .general {
       background-color:cornsilk;
@@ -88,7 +90,7 @@
   }
   
   .hobbies {
-    display: flex;
+    
   }
   .videos {
     width: 40%;
