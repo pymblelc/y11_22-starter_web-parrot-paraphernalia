@@ -1,6 +1,8 @@
 // none of this works. lajsdklfjlajsdlfjasdjfa
 let button = document.getElementById("btnMaths");
 let div = document.getElementById("subjectDescText");
+let projectsURL = document.getElementById("btnProjects");
+
 
 button.addEventListener(
     "click", function () {
@@ -10,3 +12,9 @@ button.addEventListener(
 )
 
 
+
+projectsURL.addEventListener(
+    "click", function () {
+        window.location.href = "aiTest/testingAI.html";
+    }
+)

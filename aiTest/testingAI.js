@@ -24,8 +24,33 @@ analyseButton.addEventListener("click", function() {
     })
 })
 
+var faces;
+let faces = [
+    {
+    "age": 20,
+    "gender": 1,
+    "happiness": 0.8,
+    },
+    {
+    "age": 20,
+    "gender": 1,
+    "happiness": 10,
+    }
+]
+
+// faces.push allows you to add more objects into the variable
+// faces.push(
+//     {
+//     "age": 12,
+//     "gender:" "",
+//     "happiness": 0.4
+//     }
+// )
 
 
 //but with a for loop, so that it will repeat for each person without writing 
 // everything or needing to know how many ppl there are
 // for( initial  i, condition, how much you want i to change every loop)
+
+// put data collected from APIs into a variable which is an array of records with a function so that it doesn't parse from them every time. 
+// instead lets us store it and call it at any point just locally

@@ -1,5 +1,5 @@
 .wholePage {
-    background-color: linen;
+    background-color:#f3a469;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   /* translate icon */
@@ -14,13 +14,22 @@
 }
 
 .topBar {
-  background-color:rgba(174, 143, 242, 0.8);
+  background-color:rgba(174, 143, 242);
+  display:flex;
+  height:35px;
+  width: 100%;
+  align-items:center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  z-index:999; /* puts it on top*/
 }
 /* fancy header business */
   * {
     margin: 0;
     padding: 0;
     outline: 0;
+    top: 0px;
   }
 
   body {
@@ -70,14 +79,15 @@
   
 
 button {
-  background-color:linen;
-  border-color:mistyrose; 
-  border-radius:0px;
-  padding: 5px, 5px;
+  background-color:#edc4d3;
+  border-color:#7b5fac;
+  border-radius:5px;
+  padding:5px;
 }
 button:hover {
-  background-color: rgb(200, 159, 168);
-  transition-duration: 0.1s;
+  background-color:#a86aa4;
+  transition-duration: 0.2s;
+  color:#fff;
 }
 
 .bigTitle { 
@@ -101,6 +111,7 @@ button:hover {
 }
 .mainSect {
   display: flex;
+  background-color:#8f6aae
 }
 .sidebar {
   border-style:solid;
