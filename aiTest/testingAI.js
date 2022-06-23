@@ -1,10 +1,12 @@
 let analysePhoto = document.getElementById("myPhoto");
-let analyseButton = document.getElementById("btnAnalyse");
+let analyseFaces = document.getElementById("btnAnalyse");
 let analyseAllButton = document.getElementById("btnAnalyseAll");
 let textResult = document.getElementById("myText");
 
 let imageURL = analysePhoto.src;
 textResult.innerHTML = "<p> ages go here </p>";
+
+// to do: use arrays, arrays of records, loops
 
 // using the AI library
 
