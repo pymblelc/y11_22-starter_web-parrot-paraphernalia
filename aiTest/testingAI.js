@@ -1,42 +1,69 @@
-let analysePhoto = document.getElementById("myPhoto");
-let analyseFaces = document.getElementById("btnAnalyse");
-let analyseAllButton = document.getElementById("btnAnalyseAll");
-let textResult = document.getElementById("myText");
+let myURL = document.getElementById("myURL");
+let myPhoto = document.getElementById("myPhoto");
+let analyseAll = document.getElementById("btnAnalyseAll");
+let analyseFaces = document.getElementById("btnAnalyseFace");
+let analyseImage = document.getElementById("btnAnalyseImg");
+let analyseTags = document.getElementById("btnAnalyseTags");
+let myText = document.getElementById("myText");
 
-let imageURL = analysePhoto.src;
-textResult.innerHTML = "<p> ages go here </p>";
 
+let imageURL = myPhoto.src;
+myText.innerHTML = "<p> ages go here </p>";
+myURL.innerHTML = imageURL ; 
 // to do: use arrays, arrays of records, loops
 
 // using the AI library
 
-analyseAllButton.addEventListener("click", function() {
+//analyse all button
+analyseAll.addEventListener("click", function() {
     ImageAPI.analyseFaces(imageURL, function (data) {
         console.log(data);
     })
 })
 
-analyseButton.addEventListener("click", function() {
+//analyse faces button
+analyseFaces.addEventListener("click", function() {
     ImageAPI.analyseFaces(imageURL, function (data) {
-        textResult.innerHTML = (data[0].faceAttributes.age);
+
         for(let i=0; i < data.length; i++) {
             let age = data[i].faceAttributes.age;
-            textResult.innerHTML = "<p> age, from left to right </p>;";
+            myText.innerHTML += "face " + (i + 1) + ": " + age + "<br>";
         }
     })
 })
 
+//analyse images button
+analyseImage.addEventListener("click", function() {
+    ImageAPI.analyseImage(imageURL, function (data) {
+        console.log(data);
+        // myText.innerHTML = data[1].faceAttributes.age;
+
+    })
+})
+
+//list tags button
+analyseTags.addEventListener("click", function() {
+    ImageAPI.analyseImage(imageURL, function (data) {
+        let tags = data.description.tags;
+        myText.innerHTML = "here is what i see: " + tags;
+        // for(let i=0; i < data.length; i++) {
+        //     let tags = data[i].description.tags;
+        //     myText.innerHTML += "here is what i see: " + tags;
+        // }
+    })
+})
+
 var faces;
-let faces = [
+faces = [
     {
-    "age": 20,
+    // "age": data[0].faceAttributes.age,
     "gender": 1,
-    "happiness": 0.8,
+    "happiness": 1,
     },
     {
-    "age": 20,
+    // "age": data[1].faceAttributes.age,
     "gender": 1,
-    "happiness": 10,
+    "happiness": 1,
     }
 ]
 
@@ -49,10 +76,10 @@ let faces = [
 //     }
 // )
 
+// put data collected from APIs into a variable which is an array of records with a function so that it doesn't parse from them every time. instead lets us store it and call it at any point just locally 
 
-//but with a for loop, so that it will repeat for each person without writing 
-// everything or needing to know how many ppl there are
-// for( initial  i, condition, how much you want i to change every loop)
+// Input requirements:
 
-// put data collected from APIs into a variable which is an array of records with a function so that it doesn't parse from them every time. 
-// instead lets us store it and call it at any point just locally
+// Supported image formats: JPEG, PNG, GIF, BMP.
+// Image file size must be less than 4MB.
+// Image dimensions should be greater than 50 x 50.
