@@ -1,4 +1,5 @@
 let startCameraBtn = document.getElementById("startCamera");
+let stopCameraBtn = document.getElementById("stopCamera");
 let takePhotoBtn = document.getElementById("takePhoto");
 let myWebcam = document.getElementById("webcam");
 let myCanvas = document.getElementById("canvas");
@@ -7,21 +8,35 @@ let submitBtn = document.getElementById("submit");
 
 let webcam = new Webcam(myWebcam, "user", myCanvas); // is this making a function
 
-takePhotoBtn.addEventListener("click", function () {
-  console.log("yep taking photo");
-  webcam.snap();
-  var picture = webcam.snap();
-  
-  // canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-  // let image_data_url = canvas.toDataURL('image/jpeg');
-});
 
-webcam.start()
-  .then((result) => {
-    console.log("webcam started");
-  })
-  .catch((error) => {
-    console.log("error");
+startCameraBtn.addEventListener("click", function() {
+    webcam.start()
+    .then((result) => {
+        console.log("webcam started!");
+    })
+    .catch((error) => {
+        console.log("error D:");
+    });
+})
+
+stopCameraBtn.addEventListener("click", function() {
+    webcam.stop();
+})
+
+takePhotoBtn.addEventListener("click", function () {
+    var picture = webcam.snap(); // what 
+    webcam.stop();
   });
 
- 
+  submitBtn.addEventListener("click", function() {
+        let blob = new Blob([fileInput.files[0]]);
+        ImageAPI.analyseFacesBlob(blob,(data) => {
+                console.log(data);
+            }
+        );
+  })
+
+
+
+
+
